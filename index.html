@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prank Lucu</title>
+
+<style>
+body {
+  background: black;
+  color: #00ff00;
+  font-family: monospace;
+  text-align: center;
+  padding-top: 100px;
+}
+
+h1 {
+  color: red;
+  animation: kedip 0.5s infinite;
+}
+
+button {
+  padding: 15px 25px;
+  background: lime;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@keyframes kedip {
+  50% { opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<h1>⚠️ SYSTEM ERROR ⚠️</h1>
+<h2 id="teks">Memeriksa perangkat...</h2>
+
+<button onclick="prank()">KLIK DI SINI</button>
+
+<script>
+let pesan = [
+  "Memindai perangkat...",
+  "Mendeteksi teman yang kepo...",
+  "Mengumpulkan rasa penasaran...",
+  "Analisis selesai!"
+];
+
+let i = 0;
+
+function prank() {
+  if (i < pesan.length) {
+    document.getElementById("teks").innerHTML =
+    pesan[i];
+    i++;
+  } else {
+    document.body.innerHTML = `
+      <h1>🤣 KENA PRANK!</h1>
+      <h2>Santai, ini cuma prank!</h2>
+      <p>Tidak ada data yang diambil.</p>
+    `;
+  }
+}
+</script>
+
+</body>
+</html>
